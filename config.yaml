@@ -1,0 +1,867 @@
+# config.yaml
+
+# تنظیمات کلی سیستم
+settings:
+  university_name: "دانشگاه تربیت بدنی"
+  semester: "بهار 1403"
+  days_of_week: ["شنبه", "یکشنبه", "دوشنبه", "سه‌شنبه", "چهارشنبه"]
+  time_slots:
+    - {id: 1, start: "08:00", end: "09:30"}
+    - {id: 2, start: "10:00", end: "11:30"}
+    - {id: 3, start: "12:00", end: "13:30"}
+    - {id: 4, start: "14:00", end: "15:30"}
+    - {id: 5, start: "16:00", end: "17:30"}
+  max_units_per_student: 20
+  max_classes_per_day: 3
+
+# مکان‌های برگزاری کلاس‌ها
+places:
+  - code: "A1"
+    name: "سالن ورزشی اصلی"
+    capacity: 50
+    type: "سالن ورزشی"
+    gender: 0  # 0: هر دو جنسیت، 1: مرد، 2: زن
+    facilities: ["توپ والیبال", "تور", "تشک"]
+    available: true
+
+  - code: "B9"
+    name: "سالن ورزشی بانوان"
+    capacity: 40
+    type: "سالن ورزشی"
+    gender: 2
+    facilities: ["توپ والیبال", "تشک"]
+    available: true
+
+  - code: "A2"
+    name: "کلاس درس 2"
+    capacity: 20
+    type: "کلاس تئوری"
+    gender: 0
+    facilities: ["ویدئوپروژکتور", "تخته هوشمند"]
+    available: true
+
+  - code: "A3"
+    name: "کلاس درس 3"
+    capacity: 40
+    type: "کلاس تئوری"
+    gender: 0
+    facilities: ["ویدئوپروژکتور", "تخته هوشمند"]
+    available: true
+
+  - code: "A5"
+    name: "کلاس درس ۵"
+    capacity: 30
+    type: "کلاس تئوری"
+    gender: 0
+    facilities: ["ویدئوپروژکتور", "تخته هوشمند"]
+    available: true
+
+  - code: "A6"
+    name: "سالن تنیس روی میز"
+    capacity: 20
+    type: "سالن ورزشی"
+    gender: 0
+    facilities: ["میز تنیس", "توپ"]
+    available: true
+
+  - code: "A7"
+    name: "سالن والیبال"
+    capacity: 40
+    type: "سالن ورزشی"
+    gender: 0
+    facilities: ["توپ والیبال", "تور"]
+    available: true
+
+  - code: "A8"
+    name: "سالن بسکتبال"
+    capacity: 45
+    type: "سالن ورزشی"
+    gender: 0
+    facilities: ["توپ بسکتبال", "حلقه"]
+    available: true
+
+  - code: "A9"
+    name: "سالن ژیمناستیک"
+    capacity: 25
+    type: "سالن ورزشی"
+    gender: 0
+    facilities: ["تشک", "اسب چوبی", "حلقه"]
+    available: true
+
+  - code: "A10"
+    name: "سالن رزمی"
+    capacity: 30
+    type: "سالن ورزشی"
+    gender: 0
+    facilities: ["تشک"]
+    available: true
+
+  - code: "B10"
+    name: "سالن تنیس بانوان"
+    capacity: 20
+    type: "سالن ورزشی"
+    gender: 2
+    facilities: ["میز تنیس", "توپ"]
+    available: true
+
+  - code: "B11"
+    name: "سالن شطرنج"
+    capacity: 25
+    type: "سالن ورزشی"
+    gender: 0
+    facilities: ["میز شطرنج"]
+    available: true
+
+# اساتید
+teachers:
+  - code: "T001"
+    full_name: "دکتر سید محسن منوچهری نژاد"
+    gender: 1
+    degree: 3  # 1: کارشناسی، 2: کارشناسی ارشد، 3: دکتری
+    employment_type: 1  # 1: هیئت علمی تمام وقت، 2: هیئت علمی نیمه وقت، 3: حق التدریس
+    position: 1  # 1: استاد، 2: دانشیار، 3: استادیار، 4: مربی
+    max_units: 12
+    min_units: 6
+    unavailable_times: []
+    courses:
+      - "C001"
+      - "C002"
+      - "C003"
+      - "C006"
+      - "C007"
+      - "C012"
+      - "C014"
+      - "C069"
+
+  - code: "T002"
+    full_name: "دکتر مینا حکاک زاده"
+    gender: 2
+    degree: 3
+    employment_type: 1
+    position: 3
+    max_units: 10
+    min_units: 6
+    unavailable_times: []
+    courses:
+      - "C004"
+      - "C008"
+      - "C039"
+      - "C040"
+      - "C048"
+      - "C059"
+
+  - code: "T003"
+    full_name: "دکتر محمد ابراهیم رزاقی"
+    gender: 1
+    degree: 3
+    employment_type: 2
+    position: 3
+    max_units: 8
+    min_units: 4
+    unavailable_times: []
+    courses:
+      - "C005"
+      - "C009"
+      - "C013"
+      - "C037"
+      - "C046"
+
+  - code: "T004"
+    full_name: "دکتر یحیی آصفی"
+    gender: 1
+    degree: 3
+    employment_type: 1
+    position: 3
+    max_units: 12
+    min_units: 8
+    unavailable_times: []
+    courses:
+      - "C015"
+      - "C016"
+      - "C017"
+      - "C020"
+      - "C021"
+      - "C022"
+      - "C023"
+      - "C044"
+      - "C056"
+      - "C133"
+
+  - code: "T005"
+    full_name: "دکتر نعیمه محسنی زاده"
+    gender: 2
+    degree: 3
+    employment_type: 1
+    position: 3
+    max_units: 10
+    min_units: 6
+    unavailable_times: []
+    courses:
+      - "C016"
+      - "C030"
+      - "C031"
+      - "C032"
+      - "C033"
+      - "C072"
+      - "C064"
+
+  - code: "T006"
+    full_name: "دکتر سلمان سلطانی نژاد"
+    gender: 1
+    degree: 3
+    employment_type: 1
+    position: 3
+    max_units: 12
+    min_units: 8
+    unavailable_times: []
+    courses:
+      - "C024"
+      - "C034"
+      - "C035"
+      - "C042"
+      - "C043"
+      - "C057"
+      - "C068"
+      - "C073"
+      - "C075"
+      - "C076"
+      - "C133"
+
+  - code: "T007"
+    full_name: "دکتر احد شفیعی"
+    gender: 1
+    degree: 3
+    employment_type: 2
+    position: 3
+    max_units: 10
+    min_units: 6
+    unavailable_times: []
+    courses:
+      - "C019"
+      - "C025"
+      - "C026"
+      - "C027"
+      - "C029"
+      - "C044"
+      - "C045"
+      - "C056"
+      - "C082"
+
+  - code: "T008"
+    full_name: "دکتر فرید علیمرادی"
+    gender: 1
+    degree: 3
+    employment_type: 2
+    position: 3
+    max_units: 8
+    min_units: 4
+    unavailable_times: []
+    courses:
+      - "C017"
+      - "C038"
+      - "C047"
+      - "C052"
+      - "C067"
+      - "C071"
+
+  - code: "T009"
+    full_name: "مهشید عماد"
+    gender: 2
+    degree: 2
+    employment_type: 1
+    position: 4
+    max_units: 10
+    min_units: 6
+    unavailable_times: []
+    courses:
+      - "C036"
+      - "C047"
+      - "C053"
+      - "C054"
+      - "C055"
+
+  - code: "T010"
+    full_name: "دکتر رضاکریمی"
+    gender: 1
+    degree: 3
+    employment_type: 2
+    position: 3
+    max_units: 10
+    min_units: 6
+    unavailable_times: []
+    courses:
+      - "C017"
+      - "C036"
+      - "C038"
+      - "C047"
+      - "C049"
+      - "C050"
+      - "C052"
+      - "C067"
+      - "C071"
+
+# دروس
+courses:
+  - code: "C001"
+    name: "زبان تخصصی پیشرفته"
+    type: "تئوری"
+    unit_type: "جبرانی"
+    units: 2
+    priority: 1
+    gender: 0  # 0: هر دو جنسیت، 1: مرد، 2: زن
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 30
+    teachers: ["T001"]
+
+  - code: "C002"
+    name: "تئوری های سازمان و مدیریت"
+    type: "تئوری"
+    unit_type: "جبرانی"
+    units: 2
+    priority: 1
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 25
+    teachers: ["T001", "T002"]
+
+  - code: "C003"
+    name: "آمار،اندازه گیری و ارزشیابی در مدیریت ورزشی"
+    type: "تئوری"
+    unit_type: "جبرانی"
+    units: 2
+    priority: 1
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 20
+    teachers: ["T001"]
+
+  - code: "C004"
+    name: "روش تحقیق،مقاله و رساله نویسی پیشرفته"
+    type: "تئوری"
+    unit_type: "جبرانی"
+    units: 2
+    priority: 1
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 25
+    teachers: ["T002"]
+
+  - code: "C005"
+    name: "اصول ومبانی مدیریت در سازمان های ورزشی"
+    type: "تئوری"
+    unit_type: "جبرانی"
+    units: 2
+    priority: 1
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 30
+    teachers: ["T003"]
+
+  - code: "C006"
+    name: "مسائل حقوقی و اخلاقی در ورزش"
+    type: "تئوری"
+    unit_type: "اختیاری"
+    units: 2
+    priority: 1
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 20
+    teachers: ["T001"]
+
+  - code: "C007"
+    name: "روش تحقیق کیفی در مدیریت ورزشی"
+    type: "تئوری"
+    unit_type: "تخصصی"
+    units: 2
+    priority: 1
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 15
+    teachers: ["T001"]
+
+  - code: "C008"
+    name: "مدیریت منابع انسانی در سازمان های ورزشی"
+    type: "تئوری"
+    unit_type: "اختیاری"
+    units: 2
+    priority: 1
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 20
+    teachers: ["T002"]
+
+  - code: "C009"
+    name: "مدیریت بازاریابی در صنعت ورزش"
+    type: "تئوری"
+    unit_type: "تخصصی"
+    units: 2
+    priority: 1
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 25
+    teachers: ["T003"]
+
+  - code: "C010"
+    name: "مدیریت پیشرفته در ورزش"
+    type: "تئوری"
+    unit_type: "تخصصی"
+    units: 2
+    priority: 1
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 20
+    teachers: ["T002"]
+
+  - code: "C011"
+    name: "مدیریت اوقات فراغت و ورزش"
+    type: "تئوری"
+    unit_type: "تخصصی"
+    units: 2
+    priority: 1
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: ["C012"]
+    expected_students: 15
+    teachers: ["T002"]
+
+  - code: "C012"
+    name: "مدیریت رویدادهای ورزشی ملی و بین المللی"
+    type: "تئوری"
+    unit_type: "تخصصی"
+    units: 2
+    priority: 1
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 20
+    teachers: ["T001", "T002"]
+
+  - code: "C013"
+    name: "مدیریت عملکرد در سازمان های ورزشی"
+    type: "تئوری"
+    unit_type: "تخصصی"
+    units: 2
+    priority: 1
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 25
+    teachers: ["T003"]
+
+  - code: "C014"
+    name: "سمینار در مدیریت ورزشی"
+    type: "تئوری"
+    unit_type: "اختیاری"
+    units: 2
+    priority: 1
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: ["C008"]
+    corequisites: []
+    expected_students: 15
+    teachers: ["T001"]
+
+  - code: "C015"
+    name: "زبان تخصصی"
+    type: "تئوری"
+    unit_type: "جبرانی"
+    units: 2
+    priority: 3
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 30
+    teachers: ["T004"]
+
+  - code: "C016"
+    name: "آناتومی و فیزیولوژی انسان پیشرفته"
+    type: "تئوری"
+    unit_type: "تخصصی"
+    units: 2
+    priority: 3
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 25
+    teachers: ["T005"]
+
+  - code: "C017"
+    name: "بیوشیمی و متابولیسم ورزشی"
+    type: "تئوری"
+    unit_type: "تخصصی"
+    units: 2
+    priority: 3
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 20
+    teachers: ["T004"]
+
+  - code: "C018"
+    name: "توسعه عوامل آمادگی جسمانی"
+    type: "تئوری"
+    unit_type: "تخصصی"
+    units: 2
+    priority: 3
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 25
+    teachers: ["T004"]
+
+  - code: "C019"
+    name: "فیزیولوژی تمرین و عملکرد ورزشی"
+    type: "تئوری"
+    unit_type: "تخصصی"
+    units: 2
+    priority: 3
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 20
+    teachers: ["T007"]
+
+  - code: "C020"
+    name: "روش های آماری در فیزیولوژی ورزشی"
+    type: "تئوری"
+    unit_type: "تخصصی"
+    units: 2
+    priority: 3
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 15
+    teachers: ["T004"]
+
+  - code: "C021"
+    name: "روش های پژوهش در فیزیولوژی ورزشی"
+    type: "تئوری"
+    unit_type: "تخصصی"
+    units: 2
+    priority: 3
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 15
+    teachers: ["T004"]
+
+  - code: "C022"
+    name: "ارزیابی فیزیولوژیکی عملکرد ورزشی"
+    type: "تئوری_عملی"
+    unit_type: "تخصصی"
+    units: 2  # 1 عملی + 1 تئوری
+    priority: 2
+    gender: 0
+    required_place_type: "آزمایشگاه"
+    prerequisites: ["C019"]
+    corequisites: []
+    expected_students: 20
+    teachers: ["T007"]
+
+  - code: "C023"
+    name: "راهبردهای تغذیه ای در ورزش"
+    type: "تئوری"
+    unit_type: "تخصصی"
+    units: 2
+    priority: 3
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: ["C017"]
+    corequisites: []
+    expected_students: 20
+    teachers: ["T004"]
+
+  - code: "C024"
+    name: "استعدادیابی ورزشی پیشرفته"
+    type: "تئوری"
+    unit_type: "اختیاری"
+    units: 2
+    priority: 3
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: ["C025"]
+    expected_students: 15
+    teachers: ["T006"]
+
+  - code: "C025"
+    name: "خستگی و ریکاوری"
+    type: "تئوری"
+    unit_type: "تخصصی"
+    units: 2
+    priority: 3
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: ["C019"]
+    corequisites: []
+    expected_students: 20
+    teachers: ["T007"]
+
+  - code: "C026"
+    name: "سمینار در فیزیولوژی ورزشی و تندرستی"
+    type: "تئوری"
+    unit_type: "تخصصی"
+    units: 2
+    priority: 3
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: ["C022"]
+    corequisites: []
+    expected_students: 15
+    teachers: ["T004"]
+
+  - code: "C027"
+    name: "فیزیولوژی ورزشی دوران رشد"
+    type: "تئوری"
+    unit_type: "اختیاری"
+    units: 2
+    priority: 3
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: ["C019"]
+    corequisites: []
+    expected_students: 20
+    teachers: ["T006"]
+
+  - code: "C028"
+    name: "تمرین و بدنسازی در ورزشهای تیمی"
+    type: "تئوری"
+    unit_type: "اختیاری"
+    units: 2
+    priority: 3
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: ["C017"]
+    corequisites: []
+    expected_students: 25
+    teachers: ["T004"]
+
+  - code: "C029"
+    name: "فیزیولوژی ورزشی در تندرستی"
+    type: "تئوری"
+    unit_type: "تخصصی"
+    units: 2
+    priority: 3
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: ["C019"]
+    expected_students: 20
+    teachers: ["T007"]
+
+  - code: "C030"
+    name: "ارزیابی فعالیت بدنی و آمادگی جسمانی"
+    type: "تئوری_عملی"
+    unit_type: "تخصصی"
+    units: 2
+    priority: 2
+    gender: 0
+    required_place_type: "آزمایشگاه"
+    prerequisites: []
+    corequisites: []
+    expected_students: 15
+    teachers: ["T007"]
+
+  - code: "C031"
+    name: "تغذیه ورزشی و تندرستی"
+    type: "تئوری"
+    unit_type: "تخصصی"
+    units: 2
+    priority: 3
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: ["C017"]
+    corequisites: []
+    expected_students: 20
+    teachers: ["T004"]
+
+  - code: "C032"
+    name: "فیزیولوژی ورزشی بالینی"
+    type: "تئوری"
+    unit_type: "تخصصی"
+    units: 2
+    priority: 3
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: ["C016"]
+    corequisites: []
+    expected_students: 15
+    teachers: ["T005"]
+
+  - code: "C033"
+    name: "اصول تجویز فعالیت ورزشی"
+    type: "تئوری"
+    unit_type: "تخصصی"
+    units: 2
+    priority: 3
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: ["C016"]
+    corequisites: []
+    expected_students: 20
+    teachers: ["T005"]
+
+  - code: "C034"
+    name: "تجویز فعالیت ورزشی ویژه کودکان و نوجوانان"
+    type: "تئوری"
+    unit_type: "اختیاری"
+    units: 2
+    priority: 3
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: ["C033"]
+    corequisites: []
+    expected_students: 15
+    teachers: ["T006"]
+
+  - code: "C035"
+    name: "پیشگیری و کنترل آسیب های ورزشی"
+    type: "تئوری"
+    unit_type: "اختیاری"
+    units: 2
+    priority: 3
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: ["C019"]
+    corequisites: []
+    expected_students: 20
+    teachers: ["T008"]
+
+  - code: "C036"
+    name: "آناتومی انسان"
+    type: "تئوری"
+    unit_type: "پایه"
+    units: 2
+    priority: 6
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 30
+    teachers: ["T008", "T010"]
+
+  - code: "C037"
+    name: "مبانی و فلسفه تربیت بدنی و ورزش"
+    type: "تئوری"
+    unit_type: "پایه"
+    units: 2
+    priority: 6
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 35
+    teachers: ["T003", "T001", "T009"]
+
+  - code: "C038"
+    name: "ایمنی و بهداشت فردی در ورزش"
+    type: "تئوری"
+    unit_type: "پایه"
+    units: 2
+    priority: 6
+    gender: 0
+    required_place_type: "کلاس تئوری"
+    prerequisites: []
+    corequisites: []
+    expected_students: 30
+    teachers: ["T008", "T007"]
+
+  - code: "C039"
+    name: "شطرنج خانمها"
+    type: "عملی"
+    unit_type: "اختیاری"
+    units: 2
+    priority: 4
+    gender: 2
+    required_place_type: "سالن ورزشی"
+    prerequisites: []
+    corequisites: []
+    expected_students: 20
+    teachers: ["T006", "T009"]
+    required_place: "B11"
+
+  - code: "C040"
+    name: "آمادگی جسمانی1 برادران"
+    type: "عملی"
+    unit_type: "پایه"
+    units: 2
+    priority: 4
+    gender: 1
+    required_place_type: "سالن ورزشی"
+    prerequisites: []
+    corequisites: []
+    expected_students: 25
+    teachers: ["T001", "T004", "T006"]
+    required_place: "A8,A1"
+
+  # ... ادامه لیست دروس با همین فرمت
+
+# گروه‌های دانشجویی
+student_groups:
+  - id: 1
+    name: "مدیریت ورزشی ترم 1"
+    size: 25
+    required_courses: ["C001", "C002", "C003", "C004", "C005"]
+    optional_courses: ["C006", "C007", "C008"]
+
+  - id: 2
+    name: "فیزیولوژی ورزشی ترم 3"
+    size: 20
+    required_courses: ["C015", "C016", "C017", "C018", "C019"]
+    optional_courses: ["C020", "C021", "C022"]
+
+  - id: 3
+    name: "آمادگی جسمانی ترم 5"
+    size: 18
+    required_courses: ["C036", "C037", "C038", "C039", "C040"]
+    optional_courses: ["C041", "C042", "C043"]
+
+# محدودیت‌های خاص
+constraints:
+  - type: "teacher_unavailable"
+    teacher_code: "T001"
+    day: 2  # یکشنبه
+    time_slots: [1, 2]  # 8-11:30
+
+  - type: "place_maintenance"
+    place_code: "A1"
+    start_date: "1403-01-15"
+    end_date: "1403-01-22"
+
+  - type: "concurrent_courses"
+    course_codes: ["C001", "C002"]
+    max_concurrent: 1  # این دو درس نباید همزمان برگزار شوند
+
+  - type: "same_teacher_courses"
+    teacher_code: "T001"
+    min_hours_between: 2  # حداقل 2 ساعت بین کلاس‌های این استاد فاصله باشد
